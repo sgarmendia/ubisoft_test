@@ -4,9 +4,17 @@
   "description": "Light react boilerplate with Parcel",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "start": "parcel index.html",
     "build": "parcel build index.html --out-dir build"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    }
   },
   "keywords": [
     "react",
@@ -22,12 +30,13 @@
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.5.0",
     "cssnano": "^4.1.10",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "jest": "^24.5.0",
     "sass": "^1.17.3"
-  },
-  "babel": {
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
   }
 }
