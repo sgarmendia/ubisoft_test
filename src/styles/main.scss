@@ -6,12 +6,10 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
 //--------------------------------------//
 
-html {
+body {
+  margin: 0;
   background-color: dimgray;
   h1 {
     font-family: monospace;
@@ -19,3 +17,6 @@ html {
     color: white;
   }
 }
+
+//import modules
+@import 'loader';

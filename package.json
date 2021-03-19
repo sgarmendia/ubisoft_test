@@ -1,7 +1,7 @@
 {
-  "name": "parcel-react",
+  "name": "ubisoft",
   "version": "1.2.0",
-  "description": "Light react boilerplate with Parcel and Testing",
+  "description": "Front End challenge",
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
@@ -27,6 +27,7 @@
     "@babel/runtime": "^7.7.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "scss": "^0.2.4"
   },
   "devDependencies": {
