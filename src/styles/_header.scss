@@ -1,0 +1,19 @@
+header {
+    .header_container {
+        display: flex;
+        align-items: center;
+        height: 64px;
+        background-color: $header_background;
+        .header_logo {
+            margin: 16px;
+        }
+        .header_title {
+            color: $header_title;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+}

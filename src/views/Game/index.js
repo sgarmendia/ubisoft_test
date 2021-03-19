@@ -6,9 +6,7 @@ import PropTypes from 'prop-types';
 
 const Game = ({ history }) => {
     // const history = useHistory();
-    
     const { game } = useParams()
-
 
     // const { data } = useContext(WeatherAppContext);
 

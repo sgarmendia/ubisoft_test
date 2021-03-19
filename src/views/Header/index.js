@@ -1,55 +1,26 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react';
+import { useHistory } from "react-router-dom";
+
+
 //App context
 // import WeatherAppContext from '../../WeatherAppContext';
-//services
-// import fetchWeather from '../../services/fetchWeather';
-// //helpers
-// import getUniqueAndSorted from '../../helpers/getUniqueAndSorted';
-// import getCelsiusTemp from '../../helpers/getCelsiusTemp';
+import ubi_logo from '/assets/logo/ubi_logo.png'
 
 const Header = () => {
+    const history = useHistory();
     // const { setData, setCitiesData } = useContext(WeatherAppContext);
-    const [refresh, setRefresh] = useState(false);
 
-    // useEffect(() => {
-    //     if(refresh) {
-    //         const refreshData = async () => {
-    //             try {
-    //                 const data = await fetchWeather();
-    //                 const cleanData = getCelsiusTemp(data);
-    //                 const citiesData = getUniqueAndSorted(cleanData);
-
-    //                 const newData = citiesData.map(c => {
-    //                     c.isHidden = false;
-    //                     return c;
-    //                 })
-            
-    //                 localStorage.setItem('citiesData', JSON.stringify(newData));
-
-    //                 setData(cleanData);
-    //                 setCitiesData(newData);
-    //             } catch (error) {
-    //                 throw new Error(error);
-    //             } finally {
-    //                 setRefresh(false);
-    //             }
-    //         };
-
-    //         refreshData();
-    //     };
-    // }, [refresh]);
+    const handleLogoClick = () => {
+        history.push("/");
+    };
 
     return (
         <header>
             <div className="header_container">
-                <div className="header_title">Weather Elements</div>
-                <button
-                    className="btn reload"
-                    onClick={() => setRefresh(true)}
-                >
-                    <i className={`fa fa-refresh ${refresh ? 'fa-spin' : ''}`} />
-                    <span className="reload_text">Refresh</span>
-                </button>
+                <div className="header_logo" onClick={handleLogoClick}>
+                    <img src={ubi_logo} alt="Ubisoft"/>
+                </div>
+                <div className="header_title">Games catalog X1</div>
             </div>
         </header>
     )

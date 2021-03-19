@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+// @import url(https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap);
+
+//General variables
+$background-color: #F4F4F4;
+
+$header_background: #333;
+$header_title: #FFF;
+
+
+// Mixins 
+@mixin for-desktop {
+    @media (min-width: 599px) { @content; }
+}

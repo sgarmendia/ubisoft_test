@@ -1,0 +1,26 @@
+// Normalizing styles
+*,
+::before,
+::after {
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+
+//-----------------------------------//
+
+body {
+	margin: 0;
+		background-color: $background-color;
+	a {
+		text-decoration: none;
+	}
+	// .btn {
+	// 	border: none;
+	// 	border-radius: 5px;
+	// 	color: white;
+	// 	cursor: pointer;
+	// 	&:focus {
+	// 		outline: 0;
+	// 	}
+	// }
+}

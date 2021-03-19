@@ -1,22 +1,5 @@
-// Normalizing styles
-*,
-::before,
-::after {
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-}
-
-//--------------------------------------//
-
-body {
-  margin: 0;
-  background-color: dimgray;
-  h1 {
-    font-family: monospace;
-    padding-left: 1em;
-    color: white;
-  }
-}
-
-//import modules
+@import 'variables';
+@import 'normalize';
 @import 'loader';
+@import 'header';
+@import 'catalog';
