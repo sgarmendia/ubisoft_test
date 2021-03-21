@@ -20,6 +20,9 @@
             &:focus {
                 color: #FE6050;
             }
+            &.clicked {
+                color: #FE6050;
+            }
         }
     }
     @include nav_text;

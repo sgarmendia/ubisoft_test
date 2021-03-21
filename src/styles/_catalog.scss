@@ -1,10 +1,10 @@
 .catalog_container {
     margin: 105px 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(379px, 380px));
+    grid-template-columns: repeat(auto-fill, minmax(391px, 401px));
     justify-items: center;
     justify-content: center;
-    grid-row-gap: 16px;
+    row-gap: 32px;
     .gamecard_container {
         background: #FFFFFF;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -27,7 +27,7 @@
         }
     }
     @include for-wide-desktop {
-        grid-template-columns: repeat(4, 379px);
+        grid-template-columns: repeat(4, 391px);
     }
 }
 

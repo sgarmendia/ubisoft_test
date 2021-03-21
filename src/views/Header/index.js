@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from "react-router-dom";
-
-
-//App context
-// import WeatherAppContext from '../../WeatherAppContext';
+//context
+import gamesContext from '../../gamesContext';
+//logo
 import ubi_logo from '/assets/logo/ubi_logo.png'
 
 const Header = () => {
     const history = useHistory();
-    // const { setData, setCitiesData } = useContext(WeatherAppContext);
+    const { setFilter } = useContext(gamesContext);
 
     const handleLogoClick = () => {
+        setFilter("ALL")
         history.push("/");
     };
 

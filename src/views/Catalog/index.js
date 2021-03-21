@@ -1,35 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
+//context
+import GamesContext from '../../gamesContext';
 //components
 import GameCard from './GameCard';
 import Navigation from './Navigation';
-import ScrollToTop from './ScrollToTop'
-import Loader from '../Loader'
-//context
-import { useFetch } from '../../hooks/useFetch'
+import ScrollToTop from './ScrollToTop';
 
 export default () => {
-    const [games, setGames] = useState([]);
-    const [platforms, setPlatforms] = useState([]);
-    const { response=[], error, isLoading } = useFetch('all');
-    
-	if (error) throw new Error('Error fetching data');
-    
-	useEffect(() => {
-        const { games, platforms } = response;
-        console.log(response)
-        setGames(games);
-        setPlatforms(platforms);
-	}, [response]);
-
+    const { games } = useContext(GamesContext)
     return (
-        isLoading
-        ?   <Loader />
-        :   <>
-                <Navigation platforms={platforms} />
-                <div className="catalog_container">
-                    {games.map((data, i) => <GameCard key={i} {...data} />)}
-                </div>
-                <ScrollToTop />
-            </>
+        <>
+            <Navigation />
+            <div className="catalog_container">
+                {games.map((data, i) => <GameCard key={i} {...data} />)}
+            </div>
+            <ScrollToTop />
+        </>
     )
 };
