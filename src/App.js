@@ -14,7 +14,7 @@ import Header from './views/Header';
 const Catalog = React.lazy(() => import('./views/Catalog'));
 const Game = React.lazy(() => import('./views/Game'));
 //Styles
-import '/styles/main.scss';
+import './styles/main.scss';
 
 
 const App = () => {

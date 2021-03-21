@@ -13,7 +13,9 @@
       "<rootDir>/jest-setup.js"
     ],
     "moduleNameMapper": {
-      "^.+\\.(css|less|scss)$": "babel-jest"
+      "^/(.*)$": "<rootDir>/src/$1",
+      "^.+\\.(css|less|scss)$": "babel-jest",
+      "^.+\\.(jpg|jpeg|png)$": "<rootDir>/fileMock.js"
     }
   },
   "keywords": [

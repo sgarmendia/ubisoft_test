@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { useHistory, useLocation } from "react-router-dom";
 //context
-import gamesContext from '../../gamesContext';
+import gamesContext from '/gamesContext';
 //logo
-import ubi_logo from '/assets/logo/ubi_logo.png'
+import ubi_logo from '../../assets/logo/ubi_logo.png';
 
 const Header = () => {
     const history = useHistory();
