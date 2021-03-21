@@ -9,17 +9,16 @@ import { Link } from "react-router-dom";
 const GameCard = ({
     name,
     cover,
-    description,
 }) => {
 
     return (
-        <div className="citycard_container">
+        <div className="gamecard_container">
             <Link to={`/${name}`}>
                 {/* <i className="fa fa-times-circle-o" onClick={e=>console.log(e)} /> */}
-                <div className="citycard">
+                <div className="gamecard">
                     <img src={cover} alt="game image" />
-                    <h4 className="citycard_title">{name}</h4>
-                    <h5>Game Platform</h5>
+                    <div className="gamecard_title">{name}</div>
+                    <div className="gamecard_footnote">Game Platform</div>
                 </div>
             </Link>
         </div>

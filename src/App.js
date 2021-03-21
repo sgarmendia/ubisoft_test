@@ -6,9 +6,7 @@ import {
 } from 'react-router-dom';
 //React views
 import Loader from './views/Loader';
-//It is not the case in this app, if there was a call to a server
-//views would show the Loader while lazily loanding the components
-const Header = React.lazy(() => import('./views/Header'));
+import Header from './views/Header';
 const Catalog = React.lazy(() => import('./views/Catalog'));
 const Game = React.lazy(() => import('./views/Game'));
 

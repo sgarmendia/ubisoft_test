@@ -1,0 +1,32 @@
+.navigation_container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: $background-color;
+    height: 40px;
+    .navigation_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 379px;
+        .navigation {
+            margin: 0 5px;
+            border: none;
+            background-color: transparent;
+            text-transform: uppercase;
+            &:focus {
+                color: #FE6050;
+            }
+        }
+    }
+    @include nav_text;
+    @include for-desktop {
+        justify-content: flex-start;
+        .navigation_inner {
+            margin-left: 16px;
+        }
+    }
+}

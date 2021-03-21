@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 //components
 import GameCard from './GameCard';
 import Navigation from './Navigation';
+import ScrollToTop from './ScrollToTop'
 import Loader from '../Loader'
 //context
 import { useFetch } from '../../hooks/useFetch'
@@ -28,6 +29,7 @@ export default () => {
                 <div className="catalog_container">
                     {games.map((data, i) => <GameCard key={i} {...data} />)}
                 </div>
+                <ScrollToTop />
             </>
     )
 };
