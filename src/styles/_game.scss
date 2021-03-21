@@ -1,3 +1,46 @@
 .game_container {
     margin-top: 64px;
+    img {
+        width: 100%;
+        height: 368px;
+        object-fit: cover;
+        background: #C4C4C4;
+        box-shadow: inset 0px -16px 16px rgba(0, 0, 0, 0.25);
+    }
+    .game_card {
+        width: 95%;
+        margin: 8px auto;
+        padding: 32px 16px 16px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        .game_card_header {
+            .game_title {
+                @include header_title;
+                color: $card_text;
+            }
+            .game_platform {
+                margin-top: 16px;
+                @include card_title;
+            }
+        }
+        .game_description {
+            margin-top: 32px;
+            @include game_description;
+        }
+    }
+    @include for-desktop {
+        .game_card {
+            width: 82%;
+            margin: 64px auto;
+            padding: 64px 84px;
+            .game_card_header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .game_platform {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }

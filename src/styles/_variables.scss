@@ -48,3 +48,12 @@ $card_text: #333;
     font-size: 14px;
     line-height: 16px;
 }
+
+@mixin game_description {
+    color: #000;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
