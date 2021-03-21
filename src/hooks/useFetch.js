@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import gamesAPI from '../api';
 
 export const useFetch = request => {
-	const [response, setResponse] = useState([]);
+	const [response, setResponse] = useState({});
 	const [error, setError] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -12,6 +12,7 @@ export const useFetch = request => {
 			setIsLoading(true);
 			try {
 				const data = await gamesAPI(request);
+				if (data.status === 400) throw new Error;
 				setResponse(data);
 			} catch (error) {
 				setError(error);

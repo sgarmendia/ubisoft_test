@@ -24,19 +24,20 @@ export default class ErrorBoundary extends React.Component {
 	}
 
 	render() {
-	if (this.state.hasError) {
+		if (this.state.hasError) {
 
-		return (
-			<div style={containerStyle}>
-				<h1>Something went wrong.</h1>
-				<button onClick={() => this.handleReload()}>
-                	<i className="fa fa-refresh" />
-                	<span style={{ marginLeft: '5px'}} className="reload_text">Refresh</span>
-            	</button>
-			</div>
-		);
-	}
+			return (
+				<div style={containerStyle}>
+					<h1>Something went wrong.</h1>
+					<h2>{this.state.error.toString()}</h2>
+					<button onClick={() => this.handleReload()}>
+						<i className="fa fa-refresh" />
+						<span style={{ marginLeft: '5px'}} className="reload_text">Refresh</span>
+					</button>
+				</div>
+			);
+		}
 
-	return this.props.children; 
+		return this.props.children; 
 	}
 }

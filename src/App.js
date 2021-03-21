@@ -16,12 +16,13 @@ const Game = React.lazy(() => import('./views/Game'));
 //Styles
 import '/styles/main.scss';
 
+
 const App = () => {
 	const [filter, setFilter] = useState('ALL');
 
 	//I am simulating calling a server to implement async code
     const { response={}, error, isLoading } = useFetch('all');
-	if (error) throw new Error('Error fetching data');
+	if (error) throw new Error('Fetching data');
 
 	const { games=[], platforms=[] } = response;
 

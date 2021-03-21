@@ -15,7 +15,7 @@ export default request => {
                     resolve({ status: 200, platforms: platforms.platforms });
                     break;
                 default:
-                    resolve({ status: 400, message: 'No Request' });
+                    resolve({ status: 400, message: 'Wrong Request' });
             }
         }, 500);
     });
