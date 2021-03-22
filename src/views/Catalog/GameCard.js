@@ -6,7 +6,7 @@ const GameCard = ({
     name,
     cover,
 }) => (
-    <div className="gamecard_container">
+    <div className="gamecard_container" data-testid="gamecard">
         <Link to={`/${name}`}>
             <div className="gamecard">
                 <img src={cover} alt="game image" />

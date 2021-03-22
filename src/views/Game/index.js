@@ -12,7 +12,7 @@ const Game = () => {
     return (
         <div className="game_container">
             <img src={hero} alt={'game hero image'} />
-            <section className="game_card">
+            <section className="game_card" name="game_card">
                 <div className="game_card_header">
                     <div className="game_title">{name}</div>
                     <div className="game_platform">{'Game platform'}</div>

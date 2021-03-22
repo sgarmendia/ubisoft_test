@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import gamesContext from '../../gamesContext';
 
 const Navigation = () => {
-    const { platforms, setFilter, filter } = useContext(gamesContext);
+    const { platforms=[], setFilter, filter } = useContext(gamesContext);
 
     return (
         <div className="navigation_container">

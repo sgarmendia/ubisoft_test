@@ -7,7 +7,7 @@ import Navigation from './Navigation';
 import ScrollToTop from './ScrollToTop';
 
 export default () => {
-    const { games } = useContext(GamesContext)
+    const { games=[] } = useContext(GamesContext)
     return (
         <>
             <Navigation />
